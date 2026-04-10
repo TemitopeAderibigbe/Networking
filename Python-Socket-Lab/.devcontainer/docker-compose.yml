@@ -1,0 +1,10 @@
+services:
+    mathserver:
+        image: gtinfosec/mathserver
+        restart: unless-stopped
+    workspace:
+        build: .
+        volumes:
+            - ..:/workspaces/lab4
+        # Prevent container from instantly exiting, allowing us to attach terminal
+        command: /bin/sh -c "sleep infinity"

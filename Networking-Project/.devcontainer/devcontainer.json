@@ -1,0 +1,15 @@
+{
+    "name": "CS 3235 Networking Project",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "workspace",
+    "workspaceFolder": "/workspaces/networking",
+    "remoteUser": "cs3235",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-azuretools.vscode-docker",
+                "ms-python.python"
+            ]
+        }
+    }
+}

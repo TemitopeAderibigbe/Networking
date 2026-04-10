@@ -1,0 +1,3 @@
+# Make Wireshark's file open dialog open to your project folder.
+gui.fileopen.style: SPECIFIED
+gui.fileopen.dir: /workspaces/networking

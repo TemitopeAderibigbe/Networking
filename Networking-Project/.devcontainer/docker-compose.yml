@@ -1,0 +1,25 @@
+services:
+    wireshark:
+        image: gtinfosec/wireshark
+        restart: unless-stopped
+        # Allocate sufficient memory to the Wireshark GUI process.
+        # If your machine is running out of memory, you might try decreasing this,
+        # though Wireshark may run into instability if you do so.
+        shm_size: 2g
+        # Access Wireshark via http://localhost:3235 in your browser.
+        ports:
+            - 3235:5800
+        volumes:
+            - ..:/workspaces/networking
+            - ./preferences:/config/xdg/config/wireshark/preferences
+        environment:
+            # Some sensible defaults to give Wireshark's interface enough room to breathe.
+            # Feel free to change as you wish.
+            - DISPLAY_WIDTH=1920
+            - DISPLAY_HEIGHT=1080
+    workspace:
+        build: .
+        volumes:
+            - ..:/workspaces/networking
+        # Prevent container from instantly exiting, allowing us to attach terminal
+        command: /bin/sh -c "sleep infinity"
