@@ -45,7 +45,7 @@ def recv_exact(sock, n):
 
 ---
 
-## Project 4 — Network Forensics & Enterprise Exploitation
+## Network Forensics & Enterprise Exploitation Project
 
 End-to-end reconstruction of a corporate network breach through packet analysis, credential recovery, and exploitation of multiple authentication layers. The investigation follows the attacker's path through five progressive stages.
 
