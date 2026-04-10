@@ -42,6 +42,7 @@ def recv_exact(sock, n):
         buf += chunk
     return buf
 ```
+[Full Lab Write-Up](https://docs.google.com/document/d/1DO3FzpYpuRPRNUZFPqrATiqLYCHWrDaJ81eY1SOcNrk/edit?usp=sharing)
 
 ---
 
@@ -164,3 +165,5 @@ Telnet (plaintext) → /etc/shadow exfiltrated
 ## Technical Stack
 
 Python standard library throughout — `socket`, `ssl`, `struct`, `hmac`, `hashlib`, `subprocess`. No third-party networking or cryptography libraries used. DNS, TOTP, and the MDM binary protocol all implemented from wire-level specifications.
+
+[Full Project Write-Up](https://docs.google.com/document/d/1Sc-3yaOjSTfNRnXEOreWCbRrLVAg8wl_UP3zbNiCBTQ/edit?usp=sharing)
